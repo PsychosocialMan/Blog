@@ -1,0 +1,18 @@
+<div class='container'>
+  <div class='col-md-2 col-xs-0 col-lg-0'>
+  </div>
+  <div class='col-md-8 col-xs-12 col-lg-12 card'>
+    <%= button_tag submit_text, class: 'pull-right button', onclick: 'articleValidate()' %>
+    <%= form_tag path, method: method, class: 'article-enter' do %>
+      <%= hidden_field_tag 'article[id]', hidden_article_id %>
+      <br/><br/>
+      <%= text_area_tag 'article[content]', filling, class: 'input' %>
+    <% end %>
+    <% if delete_path %>
+      <%= link_to t('destroy'), delete_path, method: 'delete', class: 'flat-button pull-right', data: { confirm: t('are_you_sure') } %>
+    <% end %>
+    <%= link_to t('back'), :back, class: 'flat-button pull-left' %>
+  </div>
+  <div class='col-md-2 col-xs-0 col-lg-0'>
+  </div>
+</div>
