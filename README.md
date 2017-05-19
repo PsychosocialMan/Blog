@@ -16,6 +16,4 @@
 
 ## To Run tests
 ```
-  rails db:migrate RAILS_ENV=test
-  rails test
-```
+  rake test
